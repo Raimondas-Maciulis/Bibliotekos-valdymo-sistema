@@ -9,20 +9,17 @@ The application developed for this system is to simulate the core functionalitie
 (DURNAI DAR)
 
 ##### How to run the program :
- **Requirements**:
+**Requirements:**
+
 Python 3.8 or later
 
 **Steps to run** :
 
-Save the provided code into a Python file, for example, library_system.py.
-
-Open a terminal or command prompt.
-
-Navigate to the directory containing library_system.py.
-
-Execute the following command:
-
-python library_system.py
+* Save the provided code into a Python file, for example, library_system.py.
+* Open a terminal or command prompt.
+* Navigate to the directory containing library_system.py.
+* Execute the following command:
+* python library_system.py
 
 ##### How to use the program :
 Currently, the program is structured to demonstrate its functionality through:
