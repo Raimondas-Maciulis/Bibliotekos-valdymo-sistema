@@ -6,7 +6,6 @@
 The goal of this coursework is to design and implement a **Library Management System** that effectively models the core processes of a real-world library.  The system must allow users to manage books, members, and librarians.
 ##### Application :
 The application developed for this system is to simulate the core functionalities of a library, managing it's daily activities. It focuses on managing the library catalog: Librarians can add new books, and the system ensures all books are stored centrally. User management (members and librarians), borrowing and returning operations, reservation handling, fine management for late returns, and persistent storage through JSON files.
-(DURNAI DAR)
 
 ##### How to run the program :
 **Requirements:**
@@ -46,12 +45,14 @@ Members can borrow, return or reserve books and extend the borrow period:
 * **Concept** that lets a method perform different tasks depending on the object it's working with, even if the objects are of different types.
 * Enables you to call the same method (e.g., get_role()) on different objects, and each object will respond in its own way depending on its class.
 * Class Person has a polymorphic method get_role(), which is implemented differently in its subclasses Member and Librarian.
+
 ![Ekrano kopija 2025-04-29 094651.png](https://www.dropbox.com/scl/fi/fydoebcm8zcwys9l1h19o/Ekrano-kopija-2025-04-29-094651.png?rlkey=otv4gp8v4bo1l8lfb1gbegrzt&dl=0&raw=1)
 
 ###### **Abstraction:**
 * **Abstract class** is a class that contains one or more abstract methods. Abstract class cannot be instantiated.
 * You can define a contract for other classes to follow, without worrying about how they do it internally.
 * The Person class is declared abstract using the ABC module, and defines the get_role() method, which must be implemented by subclasses
+
 ![Ekrano kopija 2025-04-29 095829.png](https://www.dropbox.com/scl/fi/pwki7ptnh63mc7qd5icrd/Ekrano-kopija-2025-04-29-095829.png?rlkey=io7lxwejdf9h67lwbqtnfrjy3&dl=0&raw=1)
 
 
@@ -59,12 +60,14 @@ Members can borrow, return or reserve books and extend the borrow period:
 * **A mechanism** that allows you to reuse existing classes and extend their functionality. 
 * A child class inherits from a parent class and can either use or override its methods and properties.
 * Member and Librarian both inherit from the abstract base class Person. Here, Librarian inherits the name property and the structure from Person.
+
 ![Ekrano kopija 2025-04-29 100042.png](https://www.dropbox.com/scl/fi/pyhjswkckia7zehhbgip9/Ekrano-kopija-2025-04-29-100042.png?rlkey=eellk5kol6d58hau9maeotscs&dl=0&raw=1)
 
 ###### **Encapsulation:**
 * **A bundling** of data and methods that operate on that data, while restricting direct access to some components.
 * By using private (__variable) or protected (_variable), you **restrict outside access** and enforce controlled interaction.
 * These id's are encapsulated and cannot be accessed directly from outside the class.
+
 ![Ekrano kopija 2025-04-29 102034.png](https://www.dropbox.com/scl/fi/gf6tubpyl310oemj8eb5j/Ekrano-kopija-2025-04-29-102034.png?rlkey=l0iupw1kspwevptnnaw26q4rt&dl=0&raw=1)
 ![Ekrano kopija 2025-04-29 102023.png](https://www.dropbox.com/scl/fi/4u3gdt2ke9nweut0erbnm/Ekrano-kopija-2025-04-29-102023.png?rlkey=jcnzitfvuzxzubrxlxjhbfret&dl=0&raw=1)
 
@@ -84,11 +87,13 @@ Members can borrow, return or reserve books and extend the borrow period:
 **Composition**  is a relationship where one object completely owns another. If the container object is destroyed, the composed objects usually are too.
 
 * Class Book has an Author. The Author object is created and passed when the Book is initialized. If the Book is deleted, the Author associated with that instance is no longer used by the book.
+
 ![Ekrano kopija 2025-04-29 103723.png](https://www.dropbox.com/scl/fi/8gjvkg57joslarnfp33ju/Ekrano-kopija-2025-04-29-103723.png?rlkey=b6zg1z8z3x6vnzff2g0qa54br&dl=0&raw=1)
 
 **Aggregation** is a weaker relationship, where one object contains or references others—but they can exist independently.
 
 * A LibraryBranch has a list of Members and Librarians. But Member and Librarian objects can exist outside of the branch. If a branch is deleted, the people are not deleted they just aren’t part of that branch anymore.
+
 ![Ekrano kopija 2025-04-29 104039.png](https://www.dropbox.com/scl/fi/uy4xyad2kwowd3oumam1w/Ekrano-kopija-2025-04-29-104039.png?rlkey=zf3kewtey48uup0j12we33uik&dl=0&raw=1)
 
 #### Reading from file & writing to file :
