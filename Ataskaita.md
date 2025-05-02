@@ -23,11 +23,13 @@ Python 3.8 or later
 ##### How to use the program :
 Currently, the program is structured to demonstrate its functionality through:
 
-Having a library branch: 
-![Ekrano kopija 2025-04-29 093034.png](https://www.dropbox.com/scl/fi/1ztosu5zzhk8mqgzsafzq/Ekrano-kopija-2025-04-29-093034.png?rlkey=exrg3wi9pfeffhkrat6f5pvvq&dl=0&raw=1)
 
 Creating users, example: Two users (Alice as a Librarian, Bob as a Member) are created.
 ![Ekrano kopija 2025-04-29 090118.png](https://www.dropbox.com/scl/fi/qvuq2621t6qodoob59ssv/Ekrano-kopija-2025-04-29-090118.png?rlkey=uhpmkg93ugamchjf5on268hck&dl=0&raw=1)
+
+Having a library branch: 
+![Ekrano kopija 2025-04-29 093034.png](https://www.dropbox.com/scl/fi/1ztosu5zzhk8mqgzsafzq/Ekrano-kopija-2025-04-29-093034.png?rlkey=exrg3wi9pfeffhkrat6f5pvvq&dl=0&raw=1)
+
 
 Adding Books to the Catalog:
 Only librarians can add books
@@ -38,7 +40,7 @@ Members can borrow, return or reserve books and extend the borrow period:
 
 
 ## 2. Body / Analysis
-### **Functional Requirements and Implementation**
+### **Functional requirements and implementation**
 
 #### 4 OOP pillars :
 ###### **Polymorhism :**
@@ -103,7 +105,7 @@ File I/O (input/output) is used to persist data, such as books, members, and lib
 
 ![Ekrano kopija 2025-04-29 092031.png](https://www.dropbox.com/scl/fi/d5dcbxgi55et341wwotzc/Ekrano-kopija-2025-04-29-092031.png?rlkey=tg7u3gf33q7nqo319mcawferr&dl=0&raw=1)
 
-The save_members method writes the list of Members objects to a JSON file (members.json). Each members' name is converted into a dictionary format suitable for JSON serialization. This allows the data to be stored on disk and reused in future sessions.
+The save_members method writes the list of Members objects to a JSON file (members.json). Each members' name and id is converted into a dictionary format suitable for JSON serialization. This allows the data to be stored on disk and reused in future sessions.
 
 The load_members method reads from the members.json file. It loads the JSON content into Python dictionaries, then reconstructs the Member objects by passing the data. This allows the application to restore its state from previous runs.
 
